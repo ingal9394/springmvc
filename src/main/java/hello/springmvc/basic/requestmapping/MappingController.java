@@ -37,8 +37,8 @@ public class MappingController {
     * 변수명이 같으면 생략 가능
     * @PathVariable("userId") String userId -> @PathVariable userId
     */
-    @GetMapping("/mapping/{userId}")
-    public String mappingPath(@PathVariable("userId") String data){
+    @GetMapping("/mapping/{userId}")  
+    public String mappingPath(@PathVariable("userId") String data){// 파라미터가 유동적일때 PathVariable 쓰는듯
         log.info(" info log = {}",data);
         return "ok";
     }
